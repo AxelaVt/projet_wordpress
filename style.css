@@ -15,9 +15,13 @@ html {
   scroll-behavior: smooth;
 }
 
+section{
+  min-height: 100vh;
+}
 
 #serif {
   font-family:serif;
+  overflow: hidden;
 }
 
 strong{
@@ -39,7 +43,6 @@ strong{
   display:block;
 }
 
-
 .home {
 position:absolute;
 
@@ -52,6 +55,7 @@ position:absolute;
   z-index:10;
   border-radius:0;
   border-color:transparent;
+
 }
 
 .navbar-toggler {
@@ -123,6 +127,13 @@ position:absolute;
   background-color:rgba(223, 127, 42, 0.5);
 }
 */
+
+i.fa.fa-arrow-circle-down,
+a#fleche{
+  font-size: 4rem;
+  color: #df7f2a;
+}
+
 .btn-default a:link {
   color:  #df7f2a !important;
 }
@@ -239,9 +250,6 @@ h3 {
   color:rgb(231, 76, 60)
 }
 
-#h3-1 {
-  color: rgb(244,245,249);
-}
 
 .col-sm-9 {
   margin-left:145px;
@@ -746,3 +754,10 @@ ol.breadcrumb li a:hover {
     border-radius: 50%;
 /*----------------------------------------------------------------------*/
 /* FIN STATS BAR */
+
+
+/* page article wordpress */
+
+#article{
+  max-width: 100%;
+}
