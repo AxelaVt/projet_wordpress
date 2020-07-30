@@ -5,20 +5,24 @@
 ?>
 
 <div class="container">
-  <body class="home blog logged-in admin-bar no-customize-support">
+  <!-- <body class="home blog logged-in admin-bar no-customize-support"> -->
     <nav class="navbar navbar-expand-md navbar-light navbar-fixed-top mynav">
+      <div class="navbar-header">
       <a class="navbar-brand" href="index.php">
       <img src="<?php echo get_template_directory_uri(); ?>/Images/logo.png" class="d-inline-block align-top img-fluid">
       </a>
-       <?php wp_nav_menu( array( 'header-menu' => 'header-menu' ) ); ?>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      </div>
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+      </button> -->
+      <div class="collapse navbar-collapse d-flex justify-content-center">
         <div class="topnav">
           <ul class="navbar-nav">
             <li class="nav-item active">
               <a class="nav-link" href="<?php echo home_url( '/' ); ?>">HOME<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Features">FEATURES</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#history">ABOUT US</a>
@@ -38,7 +42,7 @@
           </ul>
         </div>
       </div>
-  </nav>
+    </nav>
 </div>
 
 <div class="container-fluid p-0 m-0">
@@ -68,10 +72,10 @@
                 </div>
                 <br>
                 <div class="button"><button type="button" class="btn btn-outline-secondary">Get Started Now</button>
-                  <button type="button" class="btn btn-outline-secondary">Learn More</button>
+                  <a href="<?php echo home_url( '/page-newsletter.php' ); ?>"><button type="button" class="btn btn-outline-secondary">Newsletter</button></a>
                 </div>
                 <div class="justify-content-center align-self-end mt-5 pb-0">
-                  <a  id="fleche" href="#Features"><i class="fa fa-arrow-circle-down"></i></a>
+                  <!-- <a  id="fleche" href="#Features"><i class="fa fa-arrow-circle-down"></i></a> -->
                 </div>
 
             </div>
@@ -86,7 +90,7 @@
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <div class="col-lg-3 col-sm-9 m-0">
             <article class="hovering article-loop">
-              <div class="border border-dark mb-4 w-25 mx-auto d-flex justify-content-center">
+              <div class="border border-dark mb-4 mx-auto d-flex justify-content-center">
                 <i class="fa-file-text-o"></i>
               </div>
               <div class="text-center">
@@ -177,14 +181,14 @@
         <div class="container-4 justify-content-center">
           <h3 id="RWtitle"> RECENT WORKS </h3>
           <p id="sub-title"> It has survived not only five centuries, but also the leap scrambled it to make a type. </p>
-            <div class="container-5 d-flex justify-content-center">
+            <!-- <div class="container-5 d-flex justify-content-center">
               <div class="line-1">
                 <div id="circle">
                 </div>
                 <div class="line-2">
                 </div>
               </div>
-            </div>
+            </div> -->
           <br><br><br>
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb d-flex justify-content-center">
@@ -298,7 +302,7 @@
       </div>
     </div>
     <div class="col-sm nopadding">
-      <div class="container-6">
+      <div class="container">
         <img src="<?php echo get_template_directory_uri(); ?>/Images/pf8.jpg" alt="Image8" class="imagesRW">
         <div class="overlay-3">
           <div class="line-3">
@@ -317,54 +321,55 @@
 
 
   <section id="CaseStudy"> <!-- Page Case Study -->
-    <div class="row d-flex justify-content-center">
-      <div class="col-sm-5 d-flex justify-content-center">
-        <div class="container-4 justify-content-center">
-          <h3 id="RWtitle"> CASE STUDY </h3>
-          <p id="sub-title"> A brief story about how this process qworks, keep an eye till the end. </p>
-            <div class="container-5 d-flex justify-content-center">
-              <div class="line-1">
-                <div id="circle">
+    <div class="container p-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-5 d-flex justify-content-center">
+          <div class="container-4 justify-content-center">
+            <h3 id="RWtitle"> CASE STUDY </h3>
+            <p id="sub-title"> A brief story about how this process qworks, keep an eye till the end. </p>
+              <!-- <div class="container-5 d-flex justify-content-center">
+                <div class="line-1">
+                  <div id="circle">
+                  </div>
+                  <div class="line-2">
+                  </div>
                 </div>
-                <div class="line-2">
+              </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-row justify-content-center">
+        <div class="col-lg-8 col-sm-12">
+          <div class="card">
+            <span class="hovering">
+              <div  id="borderCI" class="border border-dark justify-content-center align-items-center">
+                <i class="fa fa-lightbulb-o mt-3"></i>
+              </div>
+            <div class="card-body">
+              <h5 class="card-title">ACCUMULATE CREATIVE IDEAS</h5>
+              <div class="line-4">
+              </div>
+              <br><br>
+              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and tyepesetting industry. Lorem Ip sum has been the industry's standard dummy text ever.Lorem Ipsum is simply dummy text of the printing and tyepesetting industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
+              <a class="btn btn-danger-2 mt-4 shadow rounded">READ MORE</a>
+              <div class="container-7">
+                <div class="pagination">
+                  <a href="#" class="active">&nbsp;</a>
+                  <a href="#">&nbsp;</a>
+                  <a href="#">&nbsp;</a>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+          <img id="imgstudy" src="<?php echo get_template_directory_uri(); ?>/Images/study.jpg">
         </div>
       </div>
     </div>
 
-  <br><br><br><br><br>
 
-  <div class="row b-5">
-    <div class="col-sm-4">
-      <img id="imgstudy" src="<?php echo get_template_directory_uri(); ?>/Images/study.jpg">
-    </div>
-    <div class="col-sm-8">
-      <div class="card">
-        <span class="hovering">
-          <div  id="borderCI" class="border border-dark">
-            <i class="fa fa-lightbulb-o mt-3"></i>
-          </div>
-        <div class="card-body">
-          <h5 class="card-title">ACCUMULATE CREATIVE IDEAS</h5>
-          <div class="line-4">
-          </div>
-          <br><br>
-          <p class="card-text">Lorem Ipsum is simply dummy text of the printing and tyepesetting industry. Lorem Ip sum has been the industry's standard dummy text ever.Lorem Ipsum is simply dummy text of the printing and tyepesetting industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
-          <a class="btn btn-danger-2 mt-4 shadow rounded">READ MORE</a>
-          <div class="container-7">
-            <div class="pagination">
-              <a href="#" class="active">&nbsp;</a>
-              <a href="#">&nbsp;</a>
-              <a href="#">&nbsp;</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
   </section>
 
   <section id="StatsBar">

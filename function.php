@@ -18,18 +18,10 @@ function Binotheme_register_assets{
   wp_enqueue_scripts('bootstrap');
   wp_register_style('style', get_bloginfo( 'stylesheet_url' ),'',false,'screen');
   wp_enqueue_style('style');
-  wp_register_scripts('script', get_theme_file_uri('script.js'), array(), null, true );
-  wp_enqueue_scripts('script');
+  // wp_register_scripts('script', get_theme_file_uri('script.js'), array(), null, true );
+  // wp_enqueue_scripts('script');
 
 }
 
 add_action('after_setup-theme', 'App\Binotheme_support');
 add_action('wp_enqueue_scripts', 'App\Binotheme_register_assets');
-
-
-
-// $logo = [0=>"fa fa-clone mt-3", 1=>"fa fa-heart-o mt-3", 2=>"fa fa-lightbulb-o mt-3", 3=>"fa fa-comments-o mt-3"];
-//
-// if (condition) {
-//   // code...
-// }
